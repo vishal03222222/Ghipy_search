@@ -45,5 +45,4 @@ const GifProvider = ({children}) => {
 export const GifState = () => {
   return useContext(GifContext);
 };
-
 export default GifProvider;

@@ -16,10 +16,7 @@ const Header = () => {
     setCategories(data);
   };
 
-  // const fetchGifCategories = async () => {
-  //   const {data} = await gf.categories();
-  //   setCategories(data);
-  // };
+ 
 
   useEffect(() => {
     fetchGifCategories();
@@ -36,7 +33,7 @@ const Header = () => {
         </Link>
 
         <div className="font-bold text-md flex gap-2 items-center">
-          {categories?.slice(0, 5).map((category) => {
+          {categories?.slice(0, 6).map((category) => {
             return (
               <Link
                 className="px-4 py-1 transition ease-in-out hover:gradient border-b-4 hidden lg:block"
