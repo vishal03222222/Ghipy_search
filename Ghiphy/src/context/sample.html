@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = [45, 46, 54, 53, 52, 53];
+let output = [];
+
+for (let i = 0; i < input.length; i++) {
+    if (i === input.length - 1) {
+        output.push(-1);
+        break;
+    }
+
+    if (input[i] > input[i + 1]) {
+        output.push(-1);
+    } else {
+        let count = 1;
+        let j = i + 1;
+        while (j < input.length - 1 && input[j] < input[j + 1]) {
+            count++;
+            j++;
+        }
+        output.push(count);
+        i = j; // Skip to the end of the increasing sequence
+    }
+}
+
+console.log(output);
+
+    </script>
+</body>
+</html>
